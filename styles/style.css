@@ -58,25 +58,38 @@
     font-size: 2.8rem;
 }
 
-.font-width-500{
+.font-weight-500{
     font-weight: 500;
 }
 
-.font-width-600{
+.font-weight-600{
     font-weight: 600;
 }
 
-.font-width-700{
+.font-weight-700{
     font-weight: 700;
 }
 
-.font-width-800{
+.font-weight-800{
     font-weight: 800;
 }
 
-.header, main{
+.header, .goat-info{
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.btn{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 21px 40px;
+    border-radius: 48px;
+    background: var(--Linear, linear-gradient(90deg, #FF42A5 13.13%, #FF42A5 87.94%));
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 }
 
 /* header styles */
@@ -121,6 +134,75 @@ nav li a {
     align-items: center;
 }
 
+/* goat section */
+/* .goat{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+} */
+
+.background-image{
+    width: 100%;
+    background: url(../images/Group\ 14.png);
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+}
+
+
+.goat-info{
+    display: flex;
+    align-items: center;
+}
+
+.goat-text{
+    margin: 4px 0 25px;
+    width: 50%;
+}
+
+.goat-title{
+    margin-top: 140px;
+}
+
+.icon-1{
+    margin-right: 18px;
+}
+
+.icon-2{
+    margin: 17px 23px 17px 0;
+}
+
+.icon-3{
+    margin-right: 12px;
+    margin-bottom: 40px;
+}
+
+.buttons{
+    margin-bottom: 140px;
+    display: flex;
+    gap: 30px;
+}
+
+#rouge-btn{
+    background-color: #4EC5F7;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 21px 40px;
+    border-radius: 48px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.goat-image{
+    width: 50%;
+}
+
+.goat-image img{
+    width: 100%;
+}
+
 
 /* responsive styles */
 /* mobile responsive */
@@ -145,6 +227,31 @@ nav li a {
     nav ul{
         flex-direction: column;
     }
+
+    /* goat section responsive */
+    .background-image{
+        background-size: 100% 50%;
+    }
+
+    .goat-info{
+        flex-direction: column;
+        margin: 15px;
+        transform: scale(0.8);
+    }
+
+    .goat-image{
+        width: 100%;
+    }
+
+    .goat-title{
+        font-size: 35px;
+        margin-top: 0px;
+    }
+
+    .goat-text{
+        width: 80%;
+        font-size: 50px;
+    }
 }
 
 /* medium device responsive */
@@ -157,6 +264,30 @@ nav li a {
     .logo{
         margin-bottom: 60px;
     }
+    
+    /* goat section responsive */
+    .background-image{
+        background-size: 100% 50%;
+    }
+
+    .goat-info{
+        flex-direction: column;
+        margin: 15px;
+        transform: scale(1);
+    }
+
+    .goat-image{
+        width: 100%;
+    }
+
+    .goat-title{
+        font-size: 35px;
+    }
+
+    .goat-text{
+        width: 80%;
+        font-size: 50px;
+    }
 }
 
 /* large device responsive */
@@ -168,6 +299,34 @@ nav li a {
     .logo{
         margin-bottom: 60px;
     }
+
+    /* goat section responsive */
+    .background-image{
+        background-size: 100% 50%;
+    }
+
+    .goat-info{
+        flex-direction: column;
+        margin: 15px;
+        transform: scale(1);
+    }
+
+    .goat-image{
+        width: 100%;
+    }
+
+    .goat-image img{
+        padding: 100px;
+    }
+
+    .goat-title{
+        font-size: 35px;
+    }
+
+    .goat-text{
+        width: 80%;
+        font-size: 50px;
+    }
 }
 
 /* extra large device responsive */
@@ -178,6 +337,31 @@ nav li a {
 
     .logo{
         margin-bottom: 60px;
+    }
+ 
+    /* goat section responsive */
+    .background-image{
+        background-size: 100% 50%;
+    }
+
+    .goat-info{
+        flex-direction: column;
+        margin: 200px;
+        transform: scale(1);
+    }
+
+    .goat-image{
+        width: 100%;
+        transform: scale(1) translateY(30px);
+    }
+
+    .goat-title{
+        font-size: 35px;
+    }
+
+    .goat-text{
+        width: 80%;
+        font-size: 50px;
     }
 }
 
