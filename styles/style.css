@@ -74,7 +74,7 @@
     font-weight: 800;
 }
 
-.header, .goat-info, .gamer{
+.header, .goat-info, .gamer, .online-games, .play-instantly, .game-category{
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -228,6 +228,212 @@ nav li a {
     margin-bottom: 95px;
 }
 
+/* online games section styles */
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+  
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+  
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+  
+.play-button::before {
+    content: '\25B6';
+    font-size: 24px;
+}
+  
+.watch-now {
+    text-align: center;
+    margin-top: 5px;
+    color: #333;
+    font-weight: bold;
+    display: none;
+}
+  
+.image-container:hover .play-button {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.image-container:hover .watch-now {
+    display: block;
+}
+
+.watch{
+    position: absolute;
+    top: 64%;
+    white-space: nowrap;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.card-3:hover .watch{
+    display: block;
+}
+  
+
+.online-title, .online-description{
+    text-align: center;
+}
+
+.online-description{
+    margin: 16px 0 50px;
+}
+
+.card-description{
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+/* play instantly */
+.play-instantly{
+    margin: 120px auto;
+    display: flex;
+    gap: 140px;
+    align-items: center;
+}
+
+.play-instantly-description{
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+.play-instantly-info{
+    padding: 50px;
+}
+
+.play-instantly-image{
+    width: 70%;
+    position: relative;
+}
+
+.second-image{
+    position: absolute;
+    left: -115px;
+    bottom: -99px;
+}
+
+/* game category styles */
+.game-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+    padding: 120px 0;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 50px;
+    padding: 10px;
+    border: 1.5px solid transparent;
+    max-width: 30%;
+}
+
+.item:hover{
+    border: 1.5px solid #FF42A5;
+    cursor: pointer;
+}
+
+.item:hover p{
+    color: #FF42A5;
+}
+
+/* footer section */
+footer{
+    text-align: center;
+    background: #0B0223;
+    padding: 120px 0;
+}
+
+.footer-content{
+    padding: 10px;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.footer-logo{
+    margin: 0 auto;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-soical{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 60px 0 70px;
+}
+
+.footer-links{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a{
+    color: rgba(255, 255, 255, 0.60);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+}
+
+.copyright{
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-weight: 500;
+    padding-top: 28px;
+}
+
 
 /* responsive styles */
 /* mobile responsive */
@@ -296,6 +502,60 @@ nav li a {
         width: 100%;
         text-align: center;
     }
+
+    /* online games section responsive */
+    .online-games{
+        padding: 20px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* play instantly */
+    .play-instantly{
+        flex-direction: column;
+    }
+
+    .play-instantly-image img{
+        width: 100%;
+    }
+
+    .second-image{
+        transform: scale(.4);
+        position: absolute;
+        left: -125px;
+        bottom: -132px;
+    }
+
+    .play-instantly-image {
+        width: 60%;
+    }
+
+    /* game category responsive */
+    .game-category{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3px;
+        scale: 0.8;
+        padding: 20px 0;
+        justify-content: space-between;
+        margin: 0px;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 50px;
+        padding: 12px;
+        border: 1.5px solid transparent;
+        max-width: 30%;
+        font-size: 14px;
+        scale: .8;
+    }
 }
 
 /* medium device responsive */
@@ -350,6 +610,36 @@ nav li a {
     .gamer-info{
         width: 100%;
         text-align: center;
+    }
+    
+    /* online games section responsive */
+    .online-games{
+        padding: 20px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    /* play instantly */
+    .play-instantly{
+        flex-direction: column;
+    }
+    
+    .play-instantly-image img{
+        width: 100%;
+    }
+
+    .second-image{
+        transform: scale(.4);
+        position: absolute;
+        left: -186px;
+        bottom: -191px;
+    }
+
+    .play-instantly-image {
+        width: 60%;
     }
 }
 
@@ -409,6 +699,36 @@ nav li a {
         width: 100%;
         text-align: center;
     }
+        
+    /* online games section responsive */
+    .online-games{
+        padding: 20px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    /* play instantly */
+    .play-instantly{
+        flex-direction: column;
+    }
+
+    .play-instantly-image img{
+        width: 100%;
+    }
+
+    .second-image{
+        transform: scale(.4);
+        position: absolute;
+        left: -275px;
+        bottom: -274px;
+    }
+
+    .play-instantly-image {
+        width: 60%;
+    }  
 }
 
 /* extra large device responsive */
@@ -464,6 +784,37 @@ nav li a {
         width: 100%;
         text-align: center;
     }
+
+            
+    /* online games section responsive */
+    .online-games{
+        padding: 20px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    /* play instantly */
+    .play-instantly{
+        flex-direction: column;
+    }
+    
+    .play-instantly-image img{
+        width: 100%;
+    }
+
+    .second-image{
+        transform: scale(.5);
+        position: absolute;
+        left: -275px;
+        bottom: -274px;
+    }
+
+    .play-instantly-image {
+        width: 70%;
+    } 
 }
 
 /* extra extra large device responsive*/
@@ -496,6 +847,16 @@ nav li a {
     /* gamer section responsive */
     .gamer{
         padding: 60px;
+    }
+
+    /* online games section responsive */
+    .online-games{
+        padding: 200px;
+    }
+
+    .cards{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
 }
 
