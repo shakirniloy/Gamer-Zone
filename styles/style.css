@@ -1,0 +1,189 @@
+/* common shared styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.text-gray{
+    color: #534C64;
+}
+
+.text-dark{
+    color: #3C354F;
+}
+
+.text-blue{
+    color: #0B0223;
+}
+
+.text-white{
+    color: #fff;
+}
+
+.text-pink{
+    color: #F948B2;
+}
+
+.text-light-pink{
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.text-18{
+    font-size: 1.125rem;
+}
+
+.text-20{
+    font-size: 1.25rem;
+}
+
+.text-48{
+    font-size: 3rem;
+}
+
+.text-24{
+    font-size: 1.5rem;
+}
+
+.text-32{
+    font-size: 2rem;
+}
+
+.text-95{
+    font-size: 5.9rem;
+}
+
+.text-45{
+    font-size: 2.8rem;
+}
+
+.font-width-500{
+    font-weight: 500;
+}
+
+.font-width-600{
+    font-weight: 600;
+}
+
+.font-width-700{
+    font-weight: 700;
+}
+
+.font-width-800{
+    font-weight: 800;
+}
+
+.header, main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header styles */
+header{
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 150px;
+}
+
+.logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #3C354F;
+}
+
+.follow{
+    padding: 18px;
+    border-radius: 8px;
+    background: rgba(11, 2, 35, 0.10);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/* responsive styles */
+/* mobile responsive */
+@media screen and (max-width: 576px){
+    header{
+        box-shadow: none;
+    }
+
+    .header{
+        flex-direction: column;
+        padding: 75px;
+    }
+
+    .logo{
+        margin-bottom: 60px;
+    }
+    
+    .follow{
+        margin-top: 30px;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+}
+
+/* medium device responsive */
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .header{
+        flex-direction: column;
+        padding: 75px;
+    }
+
+    .logo{
+        margin-bottom: 60px;
+    }
+}
+
+/* large device responsive */
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .header{
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-bottom: 60px;
+    }
+}
+
+/* extra large device responsive */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .header{
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-bottom: 60px;
+    }
+}
+
+/* extra extra large device responsive */
+@media screen and (min-width: 1400px){
+    .header{
+        padding: 35px 0;
+    }
+}
